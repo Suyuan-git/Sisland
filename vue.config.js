@@ -33,6 +33,7 @@ module.exports = {
             .set("@filters", resolve("src/filters"))
             .set("@http", resolve("src/http"))
             .set("@js", resolve("src/js"))
+            .set("@lib", resolve("src/lib"))
             .set("@mixins", resolve("src/mixins"))
             .set("@router", resolve("src/router"))
             .set("@store", resolve("src/store"))
