@@ -1,21 +1,12 @@
 <template>
-    <div>
-        <m-topnav></m-topnav>
-        <div class="content">
+    <div class="layout flex-col">
+        <m-topnav class="nav"></m-topnav>
+        <div class="content flex">
             <aside v-if="asideVisible">
                 <h2>组件列表</h2>
                 <ol>
-                    <li>
-                        <router-link to="/doc/switch">Switch 组件</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/doc/button">Button 组件</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/doc/dialog">Dialog 组件</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/doc/tabs">Tabs 组件</router-link>
+                    <li v-for="item in asideList" :key="item.title">
+                        <router-link :to="item.link">{{ item.title }}</router-link>
                     </li>
                 </ol>
             </aside>
@@ -37,16 +28,69 @@ export default {
         ...mapState({
             asideVisible: state => state.aside.asideVisible
         })
+    },
+    data() {
+        return {
+            asideList: [
+                {
+                    title: "Switch 组件",
+                    link: "/doc/switch"
+                },
+                {
+                    title: "Button 组件",
+                    link: "/doc/button"
+                },
+                {
+                    title: "Dialog 组件",
+                    link: "/doc/dialog"
+                },
+                {
+                    title: "Tabs 组件",
+                    link: "/doc/tabs"
+                }
+            ]
+        }
     }
 }
 </script>
 
 <style lang="less" scoped>
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    > .nav {
+        flex-shrink: 0;
+    }
+    > .content {
+        flex-grow: 1;
+        padding-top: 54px;
+        padding-left: 156px;
+        @media (max-width: 500px) {
+            padding-left: 0;
+        }
+    }
+}
+.content {
+    display: flex;
+    > aside {
+        flex-shrink: 0;
+    }
+    > main {
+        flex-grow: 1;
+        padding: 16px;
+        background: lightgreen;
+    }
+}
 aside {
     background: lightblue;
     width: 150px;
     padding: 16px;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    height: 100%;
     > h2 {
         margin-bottom: 4px;
     }
@@ -55,11 +99,8 @@ aside {
             padding: 4px 0;
         }
     }
-    @media (max-width: 500px) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding-top: 60px;
-    }
+}
+main {
+    overflow: auto;
 }
 </style>

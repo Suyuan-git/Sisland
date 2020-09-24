@@ -20,11 +20,36 @@ const routes = [
         component: () => import("@views/Doc"),
         children: [
             {
+                path: "",
+                component: () => import(/* webpackChunkName: "doc" */ "@views/demo/doc")
+            },
+            {
                 path: "switch",
                 meta: {
                     title: "switch"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/switch")
+            },
+            {
+                path: "button",
+                meta: {
+                    title: "button"
+                },
+                component: () => import(/* webpackChunkName: "doc" */ "@views/demo/button")
+            },
+            {
+                path: "dialog",
+                meta: {
+                    title: "dialog"
+                },
+                component: () => import(/* webpackChunkName: "doc" */ "@views/demo/dialog")
+            },
+            {
+                path: "tabs",
+                meta: {
+                    title: "tabs"
+                },
+                component: () => import(/* webpackChunkName: "doc" */ "@views/demo/tabs")
             }
         ]
     }

@@ -1,6 +1,6 @@
 <template>
     <div class="topnav flex-cc">
-        <div class="logo" >LOGO</div>
+        <div class="logo">LOGO</div>
         <ul class="menu flex">
             <li>菜单1</li>
             <li>菜单2</li>
@@ -28,21 +28,28 @@ export default {
 <style lang="less" scoped>
 .topnav {
     background: pink;
+    display: flex;
     padding: 16px;
-    position: relative;
-    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
     > .logo {
         max-width: 6em;
         margin-right: auto;
     }
-
     > .menu {
+        display: flex;
+        white-space: nowrap;
+        flex-wrap: nowrap;
         > li {
             margin: 0 1em;
         }
     }
     > .toggleAside {
-        display: inline-block;
         width: 24px;
         height: 24px;
         background: red;
@@ -52,7 +59,6 @@ export default {
         transform: translateY(-50%);
         display: none;
     }
-    // 屏幕尺寸小于500 隐藏菜单,显示切换按钮
     @media (max-width: 500px) {
         > .menu {
             display: none;
@@ -60,7 +66,7 @@ export default {
         > .logo {
             margin: 0 auto;
         }
-        > .toggleAside{
+        > .toggleAside {
             display: inline-block;
         }
     }

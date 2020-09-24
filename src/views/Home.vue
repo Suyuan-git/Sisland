@@ -40,7 +40,6 @@ export default {
             margin: 0 8px;
             background: #fff;
             display: inline-block;
-            line-height: 28px;
             height: @h;
             line-height: @h;
             border-radius: @h / 2;
