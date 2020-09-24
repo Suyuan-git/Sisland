@@ -1,23 +1,21 @@
 <template>
-    <div class="flex-cc" style="padding:100px">
-        <m-switch></m-switch>
-    </div>
+<div class="flex-cc" style="padding: 100px">
+    <h1>VU-UI</h1>
+</div>
 </template>
 
 <script>
-import MSwitch from "@components/m-switch/m-switch.vue"
 export default {
     name: "Home",
     components: {
-        MSwitch
+        MSwitch,
     },
     data() {
         return {}
     },
     created() {},
-    mounted() {
-    },
-    methods: {}
+    mounted() {},
+    methods: {},
 }
 </script>
 
