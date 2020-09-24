@@ -1,0 +1,92 @@
+@import "./variable.less";
+
+/* flex */
+.flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-sc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-ac {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-bc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-bs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.flex-col-cc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col-sc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-col-ss {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.flex1 {
+    flex: 1;
+    height: 1px;
+}
+/* 点击效果 */
+.hover:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.7;
+}
+
+// 过度动画
+.transition-fade-enter-active,
+.transition-fade-leave-active {
+    transition: opacity 0.3s;
+}
+.transition-fade-enter,
+.transition-fade-leave-to {
+    opacity: 0;
+}
+
+// 文本省略
+.ellipsis {
+    //一定要有宽度
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ellipsis2 {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.ellipsis3 {
+	word-break: break-all;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
