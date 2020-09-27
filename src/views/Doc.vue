@@ -33,11 +33,11 @@ export default {
         return {
             asideList: [
                 {
-                    title: "Switch 组件",
+                    title: "Switch 开关",
                     link: "/doc/switch"
                 },
                 {
-                    title: "Button 组件",
+                    title: "Button 按钮",
                     link: "/doc/button"
                 },
                 {
@@ -79,7 +79,6 @@ export default {
     > main {
         flex-grow: 1;
         padding: 16px;
-        background: lightgreen;
     }
 }
 aside {

@@ -1,10 +1,10 @@
+import "@lib/index.less"
+import "@css/index.less"
 import Vue from "vue"
 import App from "./App.vue"
 import router from "./router"
 import store from "./store"
 
-// 导入样式
-import "@css/index.less"
 
 //导入Api
 import Api from "@/http/api/index.js"

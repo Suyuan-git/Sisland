@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-switch></v-switch>
+        <v-switch v-model="value"></v-switch>
     </div>
 </template>
 
@@ -9,6 +9,11 @@ import VSwitch from "@lib/v-switch"
 export default {
     components: {
         VSwitch
+    },
+    data() {
+        return {
+            value: true
+        }
     }
 }
 </script>
