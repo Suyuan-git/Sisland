@@ -1,6 +1,6 @@
 <template>
     <div class="layout flex-col">
-        <m-topnav class="nav"></m-topnav>
+        <m-topnav menuShow class="nav"></m-topnav>
         <div class="content flex">
             <aside v-if="asideVisible">
                 <h2>组件列表</h2>
@@ -41,8 +41,8 @@ export default {
                     link: "/doc/button"
                 },
                 {
-                    title: "Dialog 组件",
-                    link: "/doc/dialog"
+                    title: "Modal 组件",
+                    link: "/doc/modal"
                 },
                 {
                     title: "Tabs 组件",
@@ -90,6 +90,7 @@ aside {
     left: 0;
     padding-top: 70px;
     height: 100%;
+    z-index: 8;
     > h2 {
         margin-bottom: 4px;
     }

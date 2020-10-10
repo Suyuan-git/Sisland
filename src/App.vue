@@ -3,4 +3,8 @@
         <router-view />
     </div>
 </template>
-<style></style>
+<style lang="less" scoped>
+#app {
+    min-height: 100%;
+}
+</style>

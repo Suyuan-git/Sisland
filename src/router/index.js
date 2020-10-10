@@ -38,11 +38,11 @@ const routes = [
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/button")
             },
             {
-                path: "dialog",
+                path: "modal",
                 meta: {
-                    title: "dialog"
+                    title: "modal"
                 },
-                component: () => import(/* webpackChunkName: "doc" */ "@views/demo/dialog")
+                component: () => import(/* webpackChunkName: "doc" */ "@views/demo/modal")
             },
             {
                 path: "tabs",

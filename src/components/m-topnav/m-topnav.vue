@@ -1,17 +1,24 @@
 <template>
     <div class="topnav flex-cc">
-        <div class="logo">LOGO</div>
+        <router-link to="/" class="logo">VU-UI</router-link>
         <ul class="menu flex">
-            <li>菜单1</li>
-            <li>菜单2</li>
+            <li>
+                <router-link to="doc">文档</router-link>
+            </li>
         </ul>
-        <span class="toggleAside" @click="toggleAside"></span>
+        <img v-if="menuShow" src="@static/images/menu.png" @click="toggleAside" class="toggleAside" />
     </div>
 </template>
 
 <script>
 import { mapState } from "vuex"
 export default {
+    props: {
+        menuShow: {
+            type: Boolean,
+            default: false
+        }
+    },
     computed: {
         ...mapState({
             asideVisible: state => state.aside.asideVisible
@@ -27,7 +34,6 @@ export default {
 
 <style lang="less" scoped>
 .topnav {
-    background: pink;
     display: flex;
     padding: 16px;
     position: fixed;
@@ -40,6 +46,7 @@ export default {
     > .logo {
         max-width: 6em;
         margin-right: auto;
+        text-decoration: none;
     }
     > .menu {
         display: flex;
@@ -47,12 +54,12 @@ export default {
         flex-wrap: nowrap;
         > li {
             margin: 0 1em;
+            color: #6e6d73;
         }
     }
     > .toggleAside {
         width: 24px;
         height: 24px;
-        background: red;
         position: absolute;
         left: 16px;
         top: 50%;
@@ -65,6 +72,7 @@ export default {
         }
         > .logo {
             margin: 0 auto;
+            display: none;
         }
         > .toggleAside {
             display: inline-block;
