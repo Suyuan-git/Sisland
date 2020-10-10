@@ -1,0 +1,122 @@
+<template>
+    <div v-if="value">
+        <div class="vu-modal-mask" @click="maskClick"></div>
+        <div class="vu-modal-wrapper">
+            <div class="vu-modal">
+                <header><slot name="title" /> <span @click="close" class="vu-modal-close"></span></header>
+                <main>
+                    <slot name="content" />
+                </main>
+                <footer>
+                    <v-button type="text" @click="cancel">取消</v-button>
+                    <v-button type="primary" @click="ok">确认</v-button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import VButton from "@lib/v-button"
+
+export default {
+    components: {
+        VButton
+    },
+    props: {
+        value: {
+            type: Boolean,
+            default: false
+        },
+        maskClose: {
+            type: Boolean,
+            default: true
+        }
+    },
+    methods: {
+        close() {
+            this.$emit("input", false)
+        },
+        maskClick() {
+            if (this.maskClose) {
+                this.close()
+            }
+        },
+        ok() {
+            this.$emit("ok")
+            this.close()
+        },
+        cancel() {
+            this.$emit("cancel")
+            this.close()
+        }
+    }
+}
+</script>
+
+<style lang="less" scoped>
+@radius: 4px;
+@border-color: #d9d9d9;
+.vu-modal {
+    background: white;
+    border-radius: @radius;
+    box-shadow: 0 0 3px fadeout(black, 50%);
+    min-width: 15em;
+    max-width: 90%;
+    &-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: fadeout(black, 50%);
+        z-index: 10;
+    }
+    &-wrapper {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+    }
+    > header {
+        padding: 12px 16px;
+        border-bottom: 1px solid @border-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+    > main {
+        padding: 12px 16px;
+    }
+    > footer {
+        border-top: 1px solid @border-color;
+        padding: 12px 16px;
+        text-align: right;
+    }
+    &-close {
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            background: black;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+        }
+        &::before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+</style>
