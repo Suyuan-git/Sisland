@@ -5,8 +5,8 @@
             <h1 class="title">VU-UI</h1>
             <h2 class="description">一个好用的框架</h2>
             <p class="actions">
-                <router-link to="doc">开始使用</router-link>
-                <a href="https://github.com/XuYuanV/VU-UI">GitHub</a>
+                <router-link to="/doc/introduce">开始使用</router-link>
+                <a href="https://github.com/XuYuanV/VU-UI" target="_blank">GitHub</a>
             </p>
         </div>
         <ul>

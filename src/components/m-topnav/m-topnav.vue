@@ -3,7 +3,7 @@
         <router-link to="/" class="logo">VU-UI</router-link>
         <ul class="menu flex">
             <li>
-                <router-link to="doc">文档</router-link>
+                <router-link to="/doc/introduce">文档</router-link>
             </li>
         </ul>
         <img v-if="menuShow" src="@static/images/menu.png" @click="toggleAside" class="toggleAside" />
@@ -40,7 +40,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
     justify-content: center;
     align-items: center;
     > .logo {
@@ -72,7 +72,6 @@ export default {
         }
         > .logo {
             margin: 0 auto;
-            display: none;
         }
         > .toggleAside {
             display: inline-block;

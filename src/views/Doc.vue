@@ -3,10 +3,13 @@
         <m-topnav menuShow class="nav"></m-topnav>
         <div class="content flex">
             <aside v-if="asideVisible">
-                <h2>组件列表</h2>
                 <ol>
                     <li v-for="item in asideList" :key="item.title">
-                        <router-link :to="item.link">{{ item.title }}</router-link>
+                        <router-link v-if="item.link" :to="item.link">{{ item.title }}</router-link>
+                        <template v-if="item.childer">
+                            <p class="components">{{ item.title }}</p>
+                            <router-link v-for="child in item.childer" :key="child.link" :to="child.link" class="components-item">{{ child.title }}</router-link>
+                        </template>
                     </li>
                 </ol>
             </aside>
@@ -33,20 +36,38 @@ export default {
         return {
             asideList: [
                 {
-                    title: "Switch 开关",
-                    link: "/doc/switch"
+                    title: "介绍",
+                    link: "/doc/introduce"
                 },
                 {
-                    title: "Button 按钮",
-                    link: "/doc/button"
+                    title: "安装",
+                    link: "/doc/install"
                 },
                 {
-                    title: "Modal 组件",
-                    link: "/doc/modal"
+                    title: "快速上手",
+                    link: "/doc/get-start"
                 },
+
                 {
-                    title: "Tabs 组件",
-                    link: "/doc/tabs"
+                    title: "Components",
+                    childer: [
+                        {
+                            title: "Switch 开关",
+                            link: "/doc/switch"
+                        },
+                        {
+                            title: "Button 按钮",
+                            link: "/doc/button"
+                        },
+                        {
+                            title: "Modal 组件",
+                            link: "/doc/modal"
+                        },
+                        {
+                            title: "Tabs 组件",
+                            link: "/doc/tabs"
+                        }
+                    ]
                 }
             ]
         }
@@ -55,6 +76,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@acticv: #1890ff;
+@aside-width: 180px;
+
 .layout {
     display: flex;
     flex-direction: column;
@@ -65,7 +89,7 @@ export default {
     > .content {
         flex-grow: 1;
         padding-top: 54px;
-        padding-left: 156px;
+        padding-left: @aside-width;
         @media (max-width: 500px) {
             padding-left: 0;
         }
@@ -78,25 +102,51 @@ export default {
     }
     > main {
         flex-grow: 1;
-        padding: 16px;
+        padding: 16px 32px;
     }
 }
 aside {
-    background: lightblue;
-    width: 150px;
-    padding: 16px;
+    width: @aside-width;
     position: fixed;
     top: 0;
     left: 0;
     padding-top: 70px;
     height: 100%;
-    z-index: 8;
+    z-index: 10;
+    border-right: 1px solid #e8e8e8;
+    background: white;
     > h2 {
         margin-bottom: 4px;
     }
     > ol {
         > li {
-            padding: 4px 0;
+            > a {
+                font-size: 14px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-left: 30px;
+                display: block;
+                margin-bottom: 8px;
+                height: 40px;
+                line-height: 40px;
+                &:hover {
+                    color: @acticv;
+                }
+                &.router-link-active {
+                    background-color: #e6f7ff;
+                    color: #1890ff;
+                }
+            }
+            > .components {
+                padding: 8px 16px;
+                padding-left: 30px;
+                color: rgba(0, 0, 0, 0.45);
+                font-size: 16px;
+                line-height: 1.5;
+                &-item {
+                    padding-left: 52px;
+                }
+            }
         }
     }
 }

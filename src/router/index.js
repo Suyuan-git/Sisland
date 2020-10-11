@@ -24,30 +24,51 @@ const routes = [
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/doc")
             },
             {
+                path: "introduce",
+                meta: {
+                    title: "VU-UI 介绍"
+                },
+                component: () => import(/* webpackChunkName: "doc" */ "@views/introduce")
+            },
+            {
+                path: "install",
+                meta: {
+                    title: "VU-UI 安装"
+                },
+                component: () => import(/* webpackChunkName: "doc" */ "@views/install")
+            },
+            {
+                path: "get-start",
+                meta: {
+                    title: "VU-UI 快速上手"
+                },
+                component: () => import(/* webpackChunkName: "doc" */ "@views/getStart")
+            },
+            {
                 path: "switch",
                 meta: {
-                    title: "switch"
+                    title: "Switch 组件"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/switch")
             },
             {
                 path: "button",
                 meta: {
-                    title: "button"
+                    title: "Button 组件"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/button")
             },
             {
                 path: "modal",
                 meta: {
-                    title: "modal"
+                    title: "Modal 组件"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/modal")
             },
             {
                 path: "tabs",
                 meta: {
-                    title: "tabs"
+                    title: "Tabs 组件"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/demo/tabs")
             }
