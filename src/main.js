@@ -6,6 +6,10 @@ import router from "./router"
 import store from "./store"
 import "github-markdown-css"
 
+import vueHljs from "vue-hljs";
+import "vue-hljs/dist/vue-hljs.min.css";
+Vue.use(vueHljs)
+
 //导入Api
 import Api from "@/http/api/index.js"
 Vue.use(Api)

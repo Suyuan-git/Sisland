@@ -1,27 +1,16 @@
 <template>
     <div>
-        <div>
-            <h1>代码演示</h1>
-            <div class="demo">
-                <h2>常规用法</h2>
-                <div class="demo-component">
-                    <switch-demo1></switch-demo1>
-                </div>
-                <div class="demo-actions">
-                    <v-button>查看代码</v-button>
-                    {{docs}}
-                </div>
-            </div>
-            <div class="demo">
-                <h2>支持 disabled</h2>
-                <div class="demo-component">
-                    <switch-demo2></switch-demo2>
-                </div>
-                <div class="demo-actions">
-                    <v-button>查看代码</v-button>
-                </div>
-            </div>
+        <div class="markdown">
+            <h1>Switch 开关</h1>
+            <h2>代码演示</h2>
         </div>
+        <m-code title="基本用法" directions="最简单的用法。" :code="code.demo1">
+            <switch-demo1></switch-demo1>
+        </m-code>
+
+        <m-code title="disabled" directions="Switch 失效状态。" :code="code.demo2">
+            <switch-demo2></switch-demo2>
+        </m-code>
     </div>
 </template>
 
@@ -29,46 +18,21 @@
 import VButton from "@lib/v-button"
 import SwitchDemo1 from "@views/demo/switch.demo1.vue"
 import SwitchDemo2 from "@views/demo/switch.demo2.vue"
+import code from "@views/code/switch"
+import MCode from "@components/m-code"
 export default {
     components: {
         VButton,
+        MCode,
         SwitchDemo1,
         SwitchDemo2
     },
     data() {
         return {
-            value: true,
-            docs: SwitchDemo1.__docs
+            code: code
         }
     }
 }
 </script>
 
-<style lang="less" scoped>
-@border-color: #d9d9d9;
-.demo {
-    border: 1px solid @border-color;
-    margin: 16px 0 32px;
-    > h2 {
-        font-size: 20px;
-        padding: 8px 16px;
-        border-bottom: 1px solid @border-color;
-    }
-    &-component {
-        padding: 16px;
-    }
-    &-actions {
-        padding: 8px 16px;
-        border-top: 1px dashed @border-color;
-    }
-    &-code {
-        padding: 8px 16px;
-        border-top: 1px dashed @border-color;
-        > pre {
-            line-height: 1.1;
-            font-family: Consolas, "Courier New", Courier, monospace;
-            margin: 0;
-        }
-    }
-}
-</style>
+<style lang="less" scoped></style>

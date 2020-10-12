@@ -3,9 +3,11 @@
         <div class="vu-modal-mask" @click="maskClick"></div>
         <div class="vu-modal-wrapper">
             <div class="vu-modal">
-                <header><slot name="title" /> <span @click="close" class="vu-modal-close"></span></header>
+                <header><slot name="title">标题</slot> <span @click="close" class="vu-modal-close"></span></header>
                 <main>
-                    <slot name="content" />
+                    <slot name="content">
+                        <slot></slot>
+                    </slot>
                 </main>
                 <footer>
                     <v-button type="text" @click="cancel">取消</v-button>
@@ -39,7 +41,7 @@ export default {
         },
         maskClick() {
             if (this.maskClose) {
-                this.close()
+                this.cancel()
             }
         },
         ok() {
@@ -56,12 +58,12 @@ export default {
 
 <style lang="less" scoped>
 @radius: 4px;
-@border-color: #d9d9d9;
+@border-color: #e8e8e8;
 .vu-modal {
     background: white;
     border-radius: @radius;
     box-shadow: 0 0 3px fadeout(black, 50%);
-    min-width: 15em;
+    min-width: 30em;
     max-width: 90%;
     &-mask {
         position: fixed;
@@ -80,19 +82,25 @@ export default {
         z-index: 11;
     }
     > header {
-        padding: 12px 16px;
-        border-bottom: 1px solid @border-color;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 20px;
+        padding: 16px 24px;
+        color: rgba(0, 0, 0, 0.65);
+        background: #fff;
+        border-bottom: 1px solid #e8e8e8;
+        border-radius: 4px 4px 0 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        word-wrap: break-word;
     }
     > main {
-        padding: 12px 16px;
+        padding: 24px;
     }
     > footer {
         border-top: 1px solid @border-color;
-        padding: 12px 16px;
+        padding: 10px 16px;
         text-align: right;
     }
     &-close {

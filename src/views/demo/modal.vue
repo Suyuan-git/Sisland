@@ -1,32 +1,63 @@
 <template>
     <div>
-        <h2>Modal 示例</h2>
-        <v-button type="primary" @click="modal1 = !modal1">显示对话框</v-button>
-        <v-modal v-model="modal1" @ok="modalOK" @cancel="modalCancel">
-            <template v-slot:title>自定义标题</template>
-            <template v-slot:content>自定义内容</template>
-        </v-modal>
+        <div class="markdown">
+            <h1>Modal 对话框</h1>
+            <h2>代码演示</h2>
+        </div>
+
+        <m-code title="基本" directions="第一个对话框。" :code="code.demo1">
+            <v-button type="primary" @click="visible1 = !visible1">显示对话框</v-button>
+            <v-modal v-model="visible1">
+                <p>第一行内容</p>
+                <p>第二行内容</p>
+                <p>第三行内容</p>
+            </v-modal>
+        </m-code>
+
+        <m-code title="点击蒙层是否允许关闭" directions="默认可以关闭,添加 maskClose 为false不可关闭" :code="code.demo2">
+            <v-button type="primary" @click="visible2 = !visible2">显示对话框</v-button>
+            <v-modal v-model="visible2" :maskClose="false">
+                <p>第一行内容</p>
+                <p>第二行内容</p>
+                <p>第三行内容</p>
+            </v-modal>
+        </m-code>
+
+        <m-code title="事件" directions="ok事件和cancel事件" :code="code.demo3">
+            <v-button type="primary" @click="visible3 = !visible3">显示对话框</v-button>
+            <v-modal v-model="visible3" @ok="handleOk" @cancel="handleCancel">
+                <p>第一行内容</p>
+                <p>第二行内容</p>
+                <p>第三行内容</p>
+            </v-modal>
+        </m-code>
     </div>
 </template>
 
 <script>
+import MCode from "@components/m-code"
+import code from "@views/code/modal"
 import VModal from "@lib/v-modal"
 import VButton from "@lib/v-button"
 export default {
     components: {
+        MCode,
         VModal,
         VButton
     },
     data() {
         return {
-            modal1: false
+            visible1: false,
+            visible2: false,
+            visible3: false,
+            code: code
         }
     },
-    methods:{
-        modalOK(){
+    methods: {
+        handleOk() {
             console.log("ok")
         },
-        modalCancel(){
+        handleCancel() {
             console.log("cancel")
         }
     }

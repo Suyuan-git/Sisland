@@ -87,7 +87,7 @@ ul {
         width: 300px;
         margin: 16px 0;
         display: grid;
-        justify-content: start;
+        justify-content: center;
         align-content: space-between;
         grid-template-areas:
             "icon title"

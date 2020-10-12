@@ -1,6 +1,3 @@
-<docs>
-## This is an Example component.
-</docs>
 <template>
     <div>
         <v-switch v-model="value"></v-switch>

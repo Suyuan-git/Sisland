@@ -30,11 +30,11 @@ export default {
     width: @h*2;
     height: @h;
     border-radius: @h / 2;
-    background: rgba(0,0,0,.5);
+    background: #ccc;
     border: none;
     position: relative;
     cursor: pointer;
-    
+
     &:focus {
         outline: none;
     }
@@ -54,5 +54,10 @@ export default {
         left: 2px;
         transition: all 0.36s ease 0s;
     }
+}
+
+[disabled] {
+    cursor: not-allowed;
+    opacity: 0.4;
 }
 </style>

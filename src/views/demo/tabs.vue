@@ -1,25 +1,34 @@
 <template>
     <div>
-        tabs
-        <h2>示例1</h2>
-        <v-tabs v-model="value">
-            <v-tab label="Tab1" name="1">内容1</v-tab>
-            <v-tab label="Tab2" name="2">内容2</v-tab>
-        </v-tabs>
+        <div class="markdown">
+            <h1>Tabs 标签页</h1>
+            <h2>代码演示</h2>
+        </div>
+
+        <m-code title="基本用法" directions="默认选中第一项。" :code="code.demo1">
+            <v-tabs v-model="value">
+                <v-tab label="Tab1" name="1">Content of Tab Pane 1</v-tab>
+                <v-tab label="Tab2" name="2">Content of Tab Pane 2</v-tab>
+            </v-tabs>
+        </m-code>
     </div>
 </template>
 
 <script>
 import VTabs from "@lib/v-tabs"
 import VTab from "@lib/v-tab"
+import MCode from "@components/m-code"
+import code from "@views/code/tabs"
 export default {
     components: {
         VTabs,
-        VTab
+        VTab,
+        MCode
     },
     data() {
         return {
-            value: "1"
+            value: "1",
+            code: code
         }
     }
 }

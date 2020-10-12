@@ -96,6 +96,7 @@ export default {
         color: @color;
         border-bottom: 1px solid @border-color;
         position: relative;
+        margin-bottom: 16px;
         &-item {
             padding: 8px 0;
             margin: 0 16px;
