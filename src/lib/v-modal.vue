@@ -65,6 +65,7 @@ export default {
     box-shadow: 0 0 3px fadeout(black, 50%);
     min-width: 30em;
     max-width: 90%;
+
     &-mask {
         position: fixed;
         top: 0;
@@ -125,6 +126,11 @@ export default {
         &::after {
             transform: translate(-50%, -50%) rotate(45deg);
         }
+    }
+}
+@media (max-width: 500px) {
+    .vu-modal{
+        min-width: 20em;
     }
 }
 </style>
