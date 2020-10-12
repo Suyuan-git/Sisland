@@ -2,10 +2,10 @@ let code = {}
 code.demo1 = `
 <template>
     <div>
-        <v-button>default</v-button>
-        <v-button type="primary">primary</v-button>
-        <v-button type="link">link</v-button>
-        <v-button type="text">text</v-button>
+        <s-button>default</s-button>
+        <s-button type="primary">primary</s-button>
+        <s-button type="link">link</s-button>
+        <s-button type="text">text</s-button>
     </div>
 </template>
 `
@@ -14,24 +14,24 @@ code.demo2 = `
 <template>
     <div>
         <div>
-            <v-button size="small">default</v-button>
-            <v-button>default</v-button>
-            <v-button size="large">default</v-button>
+            <s-button size="small">default</s-button>
+            <s-button>default</s-button>
+            <s-button size="large">default</s-button>
         </div>
         <div>
-            <v-button type="primary" size="small">primary</v-button>
-            <v-button type="primary">primary</v-button>
-            <v-button type="primary" size="large">primary</v-button>
+            <s-button type="primary" size="small">primary</s-button>
+            <s-button type="primary">primary</s-button>
+            <s-button type="primary" size="large">primary</s-button>
         </div>
         <div>
-            <v-button type="link" size="small">link</v-button>
-            <v-button type="link">link</v-button>
-            <v-button type="link" size="large">link</v-button>
+            <s-button type="link" size="small">link</s-button>
+            <s-button type="link">link</s-button>
+            <s-button type="link" size="large">link</s-button>
         </div>
         <div>
-            <v-button type="text" size="small">text</v-button>
-            <v-button type="text">text</v-button>
-            <v-button type="text" size="large">text</v-button>
+            <s-button type="text" size="small">text</s-button>
+            <s-button type="text">text</s-button>
+            <s-button type="text" size="large">text</s-button>
         </div>
     </div>
 </template>
@@ -40,10 +40,10 @@ code.demo2 = `
 code.demo3 = `
 <template>
     <div>
-        <v-button disabled>default</v-button>
-        <v-button type="primary" disabled>primary</v-button>
-        <v-button type="link" disabled>link</v-button>
-        <v-button type="text" disabled>text</v-button>
+        <s-button disabled>default</s-button>
+        <s-button type="primary" disabled>primary</s-button>
+        <s-button type="link" disabled>link</s-button>
+        <s-button type="text" disabled>text</s-button>
     </div>
 </template>
 `
@@ -51,7 +51,7 @@ code.demo3 = `
 code.demo4 = `
 <template>
     <div>
-        <v-button loading>default</v-button>
+        <s-button loading>default</s-button>
     </div>
 </template>
 `

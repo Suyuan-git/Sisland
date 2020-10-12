@@ -6,6 +6,7 @@
 
 <script>
 export default {
+    name:"s-switch",
     props: {
         value: {
             type: Boolean,

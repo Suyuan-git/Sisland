@@ -15,6 +15,7 @@
 
 <script>
 export default {
+    name:"s-tabs",
     props: {
         value: [String, Number],
         required: true
@@ -45,7 +46,7 @@ export default {
         getTabs() {
             //获取pane
             return this.$children.filter(function(item) {
-                return item.$options.name === "tab"
+                return item.$options.name === "s-tab"
             })
         },
         updateNav() {

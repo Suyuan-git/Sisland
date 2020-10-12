@@ -10,8 +10,8 @@
                     </slot>
                 </main>
                 <footer>
-                    <v-button type="text" @click="cancel">取消</v-button>
-                    <v-button type="primary" @click="ok">确认</v-button>
+                    <s-button type="text" @click="cancel">取消</s-button>
+                    <s-button type="primary" @click="ok">确认</s-button>
                 </footer>
             </div>
         </div>
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import VButton from "@lib/v-button"
-
+import SButton from "@lib/s-button"
 export default {
+    name:"s-modal",
     components: {
-        VButton
+        SButton
     },
     props: {
         value: {

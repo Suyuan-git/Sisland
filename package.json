@@ -1,14 +1,14 @@
 {
-  "name": "sisland",
-  "version": "1.0.1",
-  "description": "sisland",
+  "name": "sisland-ui",
+  "version": "1.0.3",
+  "description": "sisland-ui",
   "private": false,
-  "main": "lib/sisland.umd.min.js",
+  "main": "dist/sisland.umd.min.js",
   "author": "xuyuan",
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
-    "lib": "vue-cli-service build --target lib --name sisland --dest lib  src/lib/index.js"
+    "lib": "vue-cli-service build --target lib --name sisland src/lib/index.js"
   },
   "dependencies": {
     "@better-scroll/core": "^2.0.0-beta.10",

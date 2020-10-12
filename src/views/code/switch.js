@@ -2,14 +2,14 @@ let code = {}
 code.demo1 = `
 <template>
     <div>
-        <v-switch v-model="value"></v-switch>
+        <s-switch v-model="value"></s-switch>
     </div>
 </template>
 
 <script>
 export default {
     components: {
-        VSwitch
+        SSwitch
     },
     data() {
         return {
@@ -23,14 +23,14 @@ export default {
 code.demo2 = `
 <template>
     <div>
-        <v-switch v-model="value" disabled></v-switch>
+        <s-switch v-model="value" disabled></s-switch>
     </div>
 </template>
 
 <script>
 export default {
     components: {
-        VSwitch
+        SSwitch
     },
     data() {
         return {

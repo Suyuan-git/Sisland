@@ -2,12 +2,12 @@ let code = {}
 code.demo1 = `
 <template>
     <div>
-        <v-button type="primary" @click="showModal">显示对话框</v-button>
-        <v-modal v-model="visible">
+        <s-button type="primary" @click="showModal">显示对话框</s-button>
+        <s-modal v-model="visible">
             <p>第一行内容</p>
             <p>第二行内容</p>
             <p>第三行内容</p>
-        </v-modal>
+        </s-modal>
     </div>
 </template>
 
@@ -30,12 +30,12 @@ export default {
 code.demo2 = `
 <template>
     <div>
-        <v-button type="primary" @click="showModal">显示对话框</v-button>
-        <v-modal v-model="visible" :maskClose="false">
+        <s-button type="primary" @click="showModal">显示对话框</s-button>
+        <s-modal v-model="visible" :maskClose="false">
             <p>第一行内容</p>
             <p>第二行内容</p>
             <p>第三行内容</p>
-        </v-modal>
+        </s-modal>
     </div>
 </template>
 
@@ -58,12 +58,12 @@ export default {
 code.demo3 = `
 <template>
     <div>
-        <v-button type="primary" @click="showModal">显示对话框</v-button>
-        <v-modal v-model="visible" @ok="handleOk" @cancel="handleCancel">
+        <s-button type="primary" @click="showModal">显示对话框</s-button>
+        <s-modal v-model="visible" @ok="handleOk" @cancel="handleCancel">
             <p>第一行内容</p>
             <p>第二行内容</p>
             <p>第三行内容</p>
-        </v-modal>
+        </s-modal>
     </div>
 </template>
 

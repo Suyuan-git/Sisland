@@ -6,10 +6,10 @@
         </div>
 
         <m-code title="按钮类型" directions="按钮有四种类型：默认按钮、主按钮、链接按钮、文本按钮。" :code="code.demo1">
-            <v-button>default</v-button>
-            <v-button type="primary">primary</v-button>
-            <v-button type="link">link</v-button>
-            <v-button type="text">text</v-button>
+            <s-button>default</s-button>
+            <s-button type="primary">primary</s-button>
+            <s-button type="link">link</s-button>
+            <s-button type="text">text</s-button>
         </m-code>
 
         <m-code
@@ -19,36 +19,36 @@
             :code="code.demo2"
         >
             <div>
-                <v-button size="small">default</v-button>
-                <v-button>default</v-button>
-                <v-button size="large">default</v-button>
+                <s-button size="small">default</s-button>
+                <s-button>default</s-button>
+                <s-button size="large">default</s-button>
             </div>
             <div style="margin:10px 0">
-                <v-button type="primary" size="small">primary</v-button>
-                <v-button type="primary">primary</v-button>
-                <v-button type="primary" size="large">primary</v-button>
+                <s-button type="primary" size="small">primary</s-button>
+                <s-button type="primary">primary</s-button>
+                <s-button type="primary" size="large">primary</s-button>
             </div>
             <div>
-                <v-button type="link" size="small">link</v-button>
-                <v-button type="link">link</v-button>
-                <v-button type="link" size="large">link</v-button>
+                <s-button type="link" size="small">link</s-button>
+                <s-button type="link">link</s-button>
+                <s-button type="link" size="large">link</s-button>
             </div>
             <div>
-                <v-button type="text" size="small">text</v-button>
-                <v-button type="text">text</v-button>
-                <v-button type="text" size="large">text</v-button>
+                <s-button type="text" size="small">text</s-button>
+                <s-button type="text">text</s-button>
+                <s-button type="text" size="large">text</s-button>
             </div>
         </m-code>
 
         <m-code title="不可用状态" directions="添加 disabled 属性即可让按钮处于不可用状态，同时按钮样式也会改变。" :code="code.demo3">
-            <v-button disabled>default</v-button>
-            <v-button type="primary" disabled>primary</v-button>
-            <v-button type="link" disabled>link</v-button>
-            <v-button type="text" disabled>text</v-button>
+            <s-button disabled>default</s-button>
+            <s-button type="primary" disabled>primary</s-button>
+            <s-button type="link" disabled>link</s-button>
+            <s-button type="text" disabled>text</s-button>
         </m-code>
 
         <m-code title="加载中状态" directions="添加 loading 属性即可让按钮处于加载状态。" :code="code.demo4">
-            <v-button loading>default</v-button>
+            <s-button loading>default</s-button>
         </m-code>
 
     </div>
@@ -57,10 +57,10 @@
 <script>
 import MCode from "@components/m-code"
 import code from "@views/code/button"
-import VButton from "@lib/v-button"
+import SButton from "@lib/s-button"
 export default {
     components: {
-        VButton,
+        SButton,
         MCode
     },
     data() {

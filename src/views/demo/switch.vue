@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import VButton from "@lib/v-button"
+import SButton from "@lib/s-button"
 import SwitchDemo1 from "@views/demo/switch.demo1.vue"
 import SwitchDemo2 from "@views/demo/switch.demo2.vue"
 import code from "@views/code/switch"
 import MCode from "@components/m-code"
 export default {
     components: {
-        VButton,
+        SButton,
         MCode,
         SwitchDemo1,
         SwitchDemo2

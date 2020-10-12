@@ -7,12 +7,12 @@
         <p>以Button组件为示例：</p>
 
         <pre><code>&lt;template&gt;
-  &lt;div&gt;&lt;v-button&gt;按钮&lt;/v-button&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;s-button&gt;按钮&lt;/s-button&gt;&lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
-  import {VButton} from "sisland"
+  import {SButton} from "sisland"
   export default {
-    components: {VButton}
+    components: {SButton}
   }
 &lt;/script&gt;
  </code></pre>

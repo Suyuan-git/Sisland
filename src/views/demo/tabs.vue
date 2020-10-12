@@ -6,23 +6,23 @@
         </div>
 
         <m-code title="基本用法" directions="默认选中第一项。" :code="code.demo1">
-            <v-tabs v-model="value">
-                <v-tab label="Tab1" name="1">Content of Tab Pane 1</v-tab>
-                <v-tab label="Tab2" name="2">Content of Tab Pane 2</v-tab>
-            </v-tabs>
+            <s-tabs v-model="value">
+                <s-tab label="Tab1" name="1">Content of Tab Pane 1</s-tab>
+                <s-tab label="Tab2" name="2">Content of Tab Pane 2</s-tab>
+            </s-tabs>
         </m-code>
     </div>
 </template>
 
 <script>
-import VTabs from "@lib/v-tabs"
-import VTab from "@lib/v-tab"
+import STabs from "@lib/s-tabs"
+import STab from "@lib/s-tab"
 import MCode from "@components/m-code"
 import code from "@views/code/tabs"
 export default {
     components: {
-        VTabs,
-        VTab,
+        STabs,
+        STab,
         MCode
     },
     data() {
