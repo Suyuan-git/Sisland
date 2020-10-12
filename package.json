@@ -1,10 +1,14 @@
 {
-  "name": "vue-prop",
-  "version": "0.1.0",
-  "private": true,
+  "name": "sisland",
+  "version": "1.0.1",
+  "description": "sisland",
+  "private": false,
+  "main": "lib/sisland.umd.min.js",
+  "author": "xuyuan",
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
-    "build": "vue-cli-service build --mode production"
+    "build": "vue-cli-service build --mode production",
+    "lib": "vue-cli-service build --target lib --name sisland --dest lib  src/lib/index.js"
   },
   "dependencies": {
     "@better-scroll/core": "^2.0.0-beta.10",
@@ -23,6 +27,7 @@
     "@vue/cli-service": "~4.3.0",
     "axios": "^0.18.0",
     "babel-plugin-import": "^1.13.0",
+    "github-markdown-css": "^4.0.0",
     "less": "^3.12.0",
     "less-loader": "^6.2.0",
     "vue-cli-plugin-axios": "0.0.4",

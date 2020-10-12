@@ -1,8 +1,8 @@
 <template>
     <div>
         <div style="margin-bottom:50px">
-            <h1 class="title">关于 VU UI</h1>
-            <p>VU_UI 是一个简单好用的UI框架</p>
+            <h1 class="title">关于 Sisland</h1>
+            <p>Sisland 是一个简单好用的UI框架</p>
         </div>
         <h2>特性</h2>
         <ul>

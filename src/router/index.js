@@ -8,7 +8,7 @@ const routes = [
     {
         path: "/",
         meta: {
-            title: "VU-UI"
+            title: "Sisland"
         },
         component: () => import(/* webpackChunkName: "Home" */ "@views/Home")
     },
@@ -26,21 +26,21 @@ const routes = [
             {
                 path: "introduce",
                 meta: {
-                    title: "VU-UI 介绍"
+                    title: "Sisland 介绍"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/introduce")
             },
             {
                 path: "install",
                 meta: {
-                    title: "VU-UI 安装"
+                    title: "Sisland 安装"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/install")
             },
             {
                 path: "get-start",
                 meta: {
-                    title: "VU-UI 快速上手"
+                    title: "Sisland 快速上手"
                 },
                 component: () => import(/* webpackChunkName: "doc" */ "@views/getStart")
             },

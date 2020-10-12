@@ -87,5 +87,7 @@ pre {
     color: #525252;
     font-size: 14px;
     font-family: Consolas, Menlo, Courier, monospace;
+    background: #FFF;
+    padding: 5px 20px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="topnav flex-cc">
-        <router-link to="/" class="logo">VU-UI</router-link>
+        <router-link to="/" class="logo">Sisland</router-link>
         <ul class="menu flex">
             <li>
                 <router-link to="/doc/introduce">文档</router-link>
