@@ -4,9 +4,6 @@ const resolve = dir => path.join(__dirname, dir)
 const { Proxy } = require("./src/http/config.js")
 
 const isProduction = process.env.NODE_ENV === "production"
-
-const docsLoader = require.resolve("./docs-loader.js")
-
 module.exports = {
     // 项目部署的基础路径,默认根目录
     // https://www.foobar.com/my-app/，那么将这个值改为 `/my-app/
