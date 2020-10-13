@@ -9,4 +9,5 @@ vue.config.js
 babel.config.js
 deploy.sh
 .prettierrc.js
+.vscode/settings.json
 *.map

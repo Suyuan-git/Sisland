@@ -1,22 +1,12 @@
 <template>
     <div class="markdown-body">
-        <h2>引入 Sisland</h2>
-        <pre><code>import {Button, Tabs, Switch, Modal} from "sisland"</code></pre>
-
-        <h2>Vue 单文件组件</h2>
-        <p>以Button组件为示例：</p>
-
-        <pre><code>&lt;template&gt;
-  &lt;div&gt;&lt;s-button&gt;按钮&lt;/s-button&gt;&lt;/div&gt;
-&lt;/template&gt;
-&lt;script&gt;
-  import {SButton} from "sisland"
-  export default {
-    components: {SButton}
-  }
-&lt;/script&gt;
- </code></pre>
-
+        <h2>引入 sisland-ui</h2>
+        <p>main.js 文件</p>
+        <div v-highlight>
+            <pre><code class="js">import sisland from 'sisland-ui';
+    import 'sisland-ui/dist/sisland.css';
+    Vue.use(sisland);</code></pre>
+        </div>
     </div>
 </template>
 
@@ -24,4 +14,11 @@
 export default {}
 </script>
 
-<style></style>
+<style lang="less">
+.hljs {
+    color: #525252;
+    font-size: 14px;
+    font-family: Consolas, Menlo, Courier, monospace;
+    background: #fff;
+}
+</style>

@@ -1,6 +1,6 @@
 {
   "name": "sisland-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "sisland-ui",
   "private": false,
   "main": "dist/sisland.umd.min.js",
@@ -14,7 +14,6 @@
     "@better-scroll/core": "^2.0.0-beta.10",
     "@better-scroll/slide": "^2.0.0-beta.10",
     "core-js": "^3.6.4",
-    "js-cookie": "^2.2.1",
     "vue": "^2.6.11",
     "vue-hljs": "^1.1.2",
     "vue-router": "^3.1.6",
@@ -25,7 +24,6 @@
     "@vue/cli-plugin-router": "~4.3.0",
     "@vue/cli-plugin-vuex": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
-    "axios": "^0.18.0",
     "babel-plugin-import": "^1.13.0",
     "github-markdown-css": "^4.0.0",
     "less": "^3.12.0",

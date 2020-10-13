@@ -10,8 +10,8 @@ import vueHljs from "vue-hljs";
 import "vue-hljs/dist/vue-hljs.min.css";
 Vue.use(vueHljs)
 
-import sisland from 'sisland';
-import 'sisland/dist/sisland.css';
+import sisland from 'sisland-ui';
+import 'sisland-ui/dist/sisland.css';
 Vue.use(sisland);
 
 Vue.config.productionTip = false

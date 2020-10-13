@@ -34,7 +34,9 @@ import MTopnav from "@components/m-topnav/m-topnav"
 export default {
     components: { MTopnav },
     data() {
-        return {}
+        return {
+            value:true
+        }
     },
     methods: {}
 }

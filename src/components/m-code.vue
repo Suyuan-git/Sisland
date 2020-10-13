@@ -80,9 +80,6 @@ export default {
     font-size: 14px;
     width: auto;
 }
-pre {
-    // background: #f7f7f7;
-}
 .hljs {
     color: #525252;
     font-size: 14px;
