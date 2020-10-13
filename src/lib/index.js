@@ -1,8 +1,8 @@
-import Button from "./s-button.vue"
-import Modal from "./s-modal.vue"
-import Switch from "./s-switch.vue"
-import Tab from "./s-tab.vue"
-import Tabs from "./s-tabs.vue"
+import Button from "./Button.vue"
+import Modal from "./Modal.vue"
+import Switch from "./Switch.vue"
+import Tab from "./Tab.vue"
+import Tabs from "./Tabs.vue"
 
 const components = [Button,Modal,Switch,Tab,Tabs]
 

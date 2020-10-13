@@ -57,7 +57,7 @@
 <script>
 import MCode from "@components/m-code"
 import code from "@views/code/button"
-import SButton from "@lib/s-button"
+import SButton from "@lib/Button"
 export default {
     components: {
         SButton,

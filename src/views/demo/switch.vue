@@ -8,14 +8,14 @@
             <switch-demo1></switch-demo1>
         </m-code>
 
-        <m-code title="disabled" directions="Switch 失效状态。" :code="code.demo2">
+        <m-code title="不可用" directions="Switch 失效状态。" :code="code.demo2">
             <switch-demo2></switch-demo2>
         </m-code>
     </div>
 </template>
 
 <script>
-import SButton from "@lib/s-button"
+import SButton from "@lib/Button"
 import SwitchDemo1 from "@views/demo/switch.demo1.vue"
 import SwitchDemo2 from "@views/demo/switch.demo2.vue"
 import code from "@views/code/switch"

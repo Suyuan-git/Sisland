@@ -37,8 +37,8 @@
 <script>
 import MCode from "@components/m-code"
 import code from "@views/code/modal"
-import SModal from "@lib/s-modal"
-import SButton from "@lib/s-button"
+import SModal from "@lib/Modal"
+import SButton from "@lib/Button"
 export default {
     components: {
         MCode,
