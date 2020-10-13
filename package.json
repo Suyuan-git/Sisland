@@ -1,6 +1,6 @@
 {
   "name": "sisland-ui",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "sisland-ui",
   "private": false,
   "main": "dist/sisland.umd.min.js",

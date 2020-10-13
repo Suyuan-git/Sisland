@@ -2,7 +2,7 @@
     <div class="layout flex-col">
         <m-topnav menuShow class="nav"></m-topnav>
         <div class="content flex">
-            <aside v-if="asideVisible">
+            <aside v-if="asideVisible" ref="aside">
                 <ol>
                     <li v-for="item in asideList" :key="item.title">
                         <router-link v-if="item.link" :to="item.link">{{ item.title }}</router-link>
@@ -33,6 +33,22 @@ export default {
         ...mapState({
             asideVisible: state => state.aside.asideVisible
         })
+    },
+    mounted() {
+        document.addEventListener("mouseup", this.handleMouseup)
+    },
+    beforeDestroy() {
+        document.removeEventListener("mouseup", this.handleMouseup, false)
+    },
+    methods: {
+        handleMouseup(e) {
+            let aside = this.$refs.aside
+            if (aside) {
+                if (!aside.contains(e.target)) {
+                    this.$store.commit("aside/asideVisible", false)
+                }
+            }
+        }
     },
     data() {
         return {

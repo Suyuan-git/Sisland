@@ -35,7 +35,7 @@ export default {
     components: { MTopnav },
     data() {
         return {
-            value:true
+            value: true
         }
     },
     methods: {}
