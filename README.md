@@ -7,6 +7,7 @@
 $ npm install sisland --save
 ```
 ## Use
+main.js
 ```js
 import sisland from 'sisland-ui';
 import 'sisland-ui/dist/sisland.css';

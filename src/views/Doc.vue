@@ -43,7 +43,7 @@ export default {
     methods: {
         handleMouseup(e) {
             let aside = this.$refs.aside
-            if (aside) {
+            if (aside && document.documentElement.clientWidth <= 500) {
                 if (!aside.contains(e.target)) {
                     this.$store.commit("aside/asideVisible", false)
                 }
