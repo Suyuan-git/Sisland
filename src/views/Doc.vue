@@ -8,7 +8,9 @@
                         <router-link v-if="item.link" :to="item.link">{{ item.title }}</router-link>
                         <template v-if="item.childer">
                             <p class="components">{{ item.title }}</p>
-                            <router-link v-for="child in item.childer" :key="child.link" :to="child.link" class="components-item">{{ child.title }}</router-link>
+                            <router-link v-for="child in item.childer" :key="child.link" :to="child.link" class="components-item"
+                                >{{ child.title.split(" ")[0] }} <span class="chinese">{{ child.title.split(" ")[1] }}</span>
+                            </router-link>
                         </template>
                     </li>
                 </ol>
@@ -52,19 +54,19 @@ export default {
                     title: "Components",
                     childer: [
                         {
-                            title: "Switch 开关",
-                            link: "/doc/switch"
-                        },
-                        {
                             title: "Button 按钮",
                             link: "/doc/button"
                         },
                         {
-                            title: "Modal 组件",
+                            title: "Switch 开关",
+                            link: "/doc/switch"
+                        },
+                        {
+                            title: "Modal 对话框",
                             link: "/doc/modal"
                         },
                         {
-                            title: "Tabs 组件",
+                            title: "Tabs 标签页",
                             link: "/doc/tabs"
                         }
                     ]
@@ -129,6 +131,8 @@ aside {
                 margin-bottom: 8px;
                 height: 40px;
                 line-height: 40px;
+                font-size: 14px;
+                color: #314659;
                 &:hover {
                     color: @acticv;
                 }
@@ -144,7 +148,15 @@ aside {
                 font-size: 16px;
                 line-height: 1.5;
                 &-item {
+                    font-size: 14px;
+                    color: #314659;
                     padding-left: 52px;
+                    > .chinese {
+                        font-size: 12px;
+                        margin-left: 6px;
+                        font-weight: 400;
+                        opacity: 0.67;
+                    }
                 }
             }
         }

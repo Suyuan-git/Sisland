@@ -7,7 +7,7 @@ import store from "./store"
 import "github-markdown-css"
 
 import vueHljs from "vue-hljs";
-import "vue-hljs/dist/vue-hljs.min.css";
+import "@css/vue-hljs.less"
 Vue.use(vueHljs)
 
 import sisland from 'sisland-ui';

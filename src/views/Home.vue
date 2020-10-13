@@ -66,8 +66,9 @@ export default {
     > .actions {
         padding: 8px 0;
         a {
-            height: auto;
-            line-height: 1.5715;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 16px;
             display: inline-block;
             margin: 0 8px;
@@ -75,9 +76,8 @@ export default {
             cursor: pointer;
             background: @green;
             color: white;
-            padding: 8px 24px;
+            padding: 12px 24px;
             border-radius: @border-radius;
-            text-align: center;
             &:hover {
                 text-decoration: none;
             }

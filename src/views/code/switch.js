@@ -8,9 +8,6 @@ code.demo1 = `
 
 <script>
 export default {
-    components: {
-        SSwitch
-    },
     data() {
         return {
             value: true
@@ -29,9 +26,6 @@ code.demo2 = `
 
 <script>
 export default {
-    components: {
-        SSwitch
-    },
     data() {
         return {
             value: false
