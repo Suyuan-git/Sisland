@@ -19,11 +19,9 @@ import SButton from "@lib/Button"
 import SwitchDemo1 from "@views/demo/switch.demo1.vue"
 import SwitchDemo2 from "@views/demo/switch.demo2.vue"
 import code from "@views/code/switch"
-import MCode from "@components/m-code"
 export default {
     components: {
         SButton,
-        MCode,
         SwitchDemo1,
         SwitchDemo2
     },

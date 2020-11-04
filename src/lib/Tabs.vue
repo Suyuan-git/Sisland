@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name:"s-tabs",
+    name: "s-tabs",
     props: {
         value: [String, Number],
         required: true
@@ -23,7 +23,8 @@ export default {
     data() {
         return {
             currentValue: this.value,
-            navList: []
+            navList: [],
+            tabTtems: []
         }
     },
     watch: {
@@ -34,7 +35,18 @@ export default {
             this.updateStatus()
         }
     },
+    created() {
+        this.initItems()
+    },
     methods: {
+        initItems() {
+            this.$on("on-tabs-tab-add", item => {
+                this.tabTtems.push(item)
+            })
+            this.$on("on-tabs-tab-remove", item => {
+                this.tabTtems.splice(this.tabTtems.indexOf(item), 1)
+            })
+        },
         tabCls(item) {
             return [
                 "vu-tabs-nav-item",
@@ -43,35 +55,26 @@ export default {
                 }
             ]
         },
-        getTabs() {
-            //获取pane
-            return this.$children.filter(function(item) {
-                return item.$options.name === "s-tab"
-            })
-        },
         updateNav() {
             //获取标题，name,并放置到navList数组中
             this.navList = []
-            let _this = this
-            this.getTabs().forEach(function(pane, index) {
-                _this.navList.push({
+            this.tabTtems.forEach((pane, index) => {
+                this.navList.push({
                     label: pane.label,
                     name: pane.name || index
                 })
                 if (!pane.name) pane.name = index
                 if (index === 0) {
-                    if (!_this.currentValue) {
-                        _this.currentValue = pane.name || index
+                    if (!this.currentValue) {
+                        this.currentValue = pane.name || index
                     }
                 }
             })
             this.updateStatus()
         },
         updateStatus() {
-            let tabs = this.getTabs()
-            let _this = this
-            tabs.forEach(function(tab) {
-                let b = tab.name === _this.currentValue
+            this.tabTtems.forEach(tab => {
+                let b = tab.name === this.currentValue
                 tab.show = b
                 return tab.show
             })

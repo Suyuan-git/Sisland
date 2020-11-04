@@ -47,13 +47,11 @@
 </template>
 
 <script>
-import MCode from "@components/m-code"
 import code from "@views/code/modal"
 import SModal from "@lib/Modal"
 import SButton from "@lib/Button"
 export default {
     components: {
-        MCode,
         SModal,
         SButton
     },

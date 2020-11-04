@@ -84,6 +84,14 @@ export default {
                         {
                             title: "Tabs 标签页",
                             link: "/doc/tabs"
+                        },
+                        {
+                            title:"Form 表单",
+                            link:"/doc/form"
+                        },
+                        {
+                            title: "Anchor 锚点",
+                            link: "/doc/anchor"
                         }
                     ]
                 }

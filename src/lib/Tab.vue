@@ -5,8 +5,10 @@
 </template>
 
 <script>
+import Emitter from "@mixins/emitter"
 export default {
-    name: 's-tab',
+    name: "s-tab",
+    mixins: [Emitter],
     props: {
         name: {
             type: String
@@ -22,6 +24,11 @@ export default {
         }
     },
     mounted() {
+        this.dispatch("s-tabs", "on-tabs-tab-add", this)
+        this.$once("hook:beforeDestroy", () => {
+            this.dispatch("s-tabs", "on-tabs-tab-remove", this)
+        })
+
         this.updateNav()
     },
     watch: {

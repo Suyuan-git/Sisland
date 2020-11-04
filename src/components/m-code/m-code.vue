@@ -15,6 +15,7 @@
 
 <script>
 export default {
+    name:"m-code",
     props: {
         title: {
             type: String,

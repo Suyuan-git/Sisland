@@ -10,6 +10,9 @@ import vueHljs from "vue-hljs";
 import "@css/vue-hljs.less"
 Vue.use(vueHljs)
 
+import MCode from "@components/m-code/m-code"
+Vue.component(MCode.name,MCode)
+
 Vue.config.productionTip = false
 
 new Vue({

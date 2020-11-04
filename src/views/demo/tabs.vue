@@ -17,13 +17,11 @@
 <script>
 import STabs from "@lib/Tabs"
 import STab from "@lib/Tab"
-import MCode from "@components/m-code"
 import code from "@views/code/tabs"
 export default {
     components: {
         STabs,
         STab,
-        MCode
     },
     data() {
         return {
