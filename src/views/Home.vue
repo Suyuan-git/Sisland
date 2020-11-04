@@ -1,6 +1,5 @@
 <template>
     <div class="home">
-        <m-topnav></m-topnav>
         <div class="banner">
             <h1 class="title">Sisland</h1>
             <h2 class="description">一个好用的UI框架</h2>
@@ -16,12 +15,12 @@
                 <p>基于Vue 2 框架开发</p>
             </li>
             <li>
-                <img src="http://s.nodejs.cn/less/img/logo.png" class="vue" />
+                <img src="@images/less.png" class="vue" />
                 <h3>使用Less</h3>
                 <p>动态样式语言</p>
             </li>
             <li>
-                <img src="../../static/images/light.png" class="vue" />
+                <img src="@images/light.png" class="vue" />
                 <h3>代码易读</h3>
                 <p>组件代码都极其简洁</p>
             </li>

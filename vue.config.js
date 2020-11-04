@@ -36,7 +36,7 @@ module.exports = {
             .set("@router", resolve("src/router"))
             .set("@store", resolve("src/store"))
             .set("@views", resolve("src/views"))
-            .set("@static", resolve("static"))
+            .set("@images", resolve("static/images"))
     },
     configureWebpack: config => {
         if (process.env.NODE_ENV === "production") {
