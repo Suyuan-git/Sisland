@@ -13,6 +13,7 @@
 <script>
 import { mapState } from "vuex"
 export default {
+    name: "m-topnav",
     props: {
         menuShow: {
             type: Boolean,
