@@ -48,8 +48,8 @@
 
 <script>
 import code from "@views/code/modal"
-import SModal from "@lib/Modal"
-import SButton from "@lib/Button"
+import SModal from "@lib/modal/modal"
+import SButton from "@lib/button/button"
 export default {
     components: {
         SModal,

@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import STabs from "@lib/Tabs"
-import STab from "@lib/Tab"
+import STabs from "@lib/tabs/tabs"
+import STab from "@lib/tab/tab"
 import code from "@views/code/tabs"
 export default {
     components: {

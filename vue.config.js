@@ -25,18 +25,14 @@ module.exports = {
         config.resolve.alias
             .set("@src", resolve("src"))
             .set("@components", resolve("src/components"))
-            .set("@base", resolve("src/components/base"))
             .set("@css", resolve("src/css"))
-            .set("@directives", resolve("src/directives"))
-            .set("@filters", resolve("src/filters"))
-            .set("@http", resolve("src/http"))
-            .set("@js", resolve("src/js"))
             .set("@lib", resolve("src/lib"))
             .set("@mixins", resolve("src/mixins"))
             .set("@router", resolve("src/router"))
             .set("@store", resolve("src/store"))
             .set("@views", resolve("src/views"))
-            .set("@images", resolve("static/images"))
+            .set("@assets", resolve("src/assets"))
+            .set("@utils", resolve("src/utils"))
     },
     configureWebpack: config => {
         if (process.env.NODE_ENV === "production") {

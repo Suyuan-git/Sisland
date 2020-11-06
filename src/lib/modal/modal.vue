@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import SButton from "@lib/Button"
+import SButton from "@lib/button/button"
 export default {
     name:"s-modal",
     components: {

@@ -6,6 +6,7 @@
 
 <script>
 export default {
+    name:"s-anchor",
     props: {
         href: {
             type: String,

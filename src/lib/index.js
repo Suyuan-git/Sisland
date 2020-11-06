@@ -1,15 +1,12 @@
-import Button from "./Button.vue"
-import Modal from "./Modal.vue"
-import Switch from "./Switch.vue"
-import Tab from "./Tab.vue"
-import Tabs from "./Tabs.vue"
+const requireLib = require.context(
+    "./", // api 相对目录
+    true, // 是否查询子目录
+    /.vue$/
+)
 
-const components = [Button,Modal,Switch,Tab,Tabs]
-
-// 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function(Vue) {
-    // 遍历注册全局组件
-    components.forEach(component => {
+    requireLib.keys().forEach(key => {
+        const component = requireLib(key).default
         Vue.component(component.name, component)
     })
 

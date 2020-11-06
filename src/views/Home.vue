@@ -15,12 +15,12 @@
                 <p>基于Vue 2 框架开发</p>
             </li>
             <li>
-                <img src="@images/less.png" class="vue" />
+                <img src="@assets/less.png" class="vue" />
                 <h3>使用Less</h3>
                 <p>动态样式语言</p>
             </li>
             <li>
-                <img src="@images/light.png" class="vue" />
+                <img src="@assets/light.png" class="vue" />
                 <h3>代码易读</h3>
                 <p>组件代码都极其简洁</p>
             </li>

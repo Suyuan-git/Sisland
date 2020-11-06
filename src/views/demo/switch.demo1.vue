@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import SSwitch from "@lib/Switch"
+import SSwitch from "@lib/switch/switch"
 export default {
     components: {
         SSwitch

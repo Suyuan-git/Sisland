@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import SButton from "@lib/Button"
+import SButton from "@lib/button/button"
 import SwitchDemo1 from "@views/demo/switch.demo1.vue"
 import SwitchDemo2 from "@views/demo/switch.demo2.vue"
 import code from "@views/code/switch"

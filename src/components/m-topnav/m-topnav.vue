@@ -6,7 +6,7 @@
                 <router-link to="/doc/introduce">文档</router-link>
             </li>
         </ul>
-        <img v-if="menuShow" src="@static/images/menu.png" @click="toggleAside" class="toggleAside" />
+        <img v-if="menuShow" src="@assets/menu.png" @click="toggleAside" class="toggleAside" />
     </div>
 </template>
 

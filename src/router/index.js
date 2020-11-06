@@ -13,6 +13,13 @@ const routes = [
         component: () => import(/* webpackChunkName: "Home" */ "@views/Home")
     },
     {
+        path:"/test",
+        meta:{
+            title:"测试页面"
+        },
+        component: () => import(/* webpackChunkName: "Home" */ "@views/test")
+    },
+    {
         path: "/doc",
         meta: {
             title: "文档介绍"

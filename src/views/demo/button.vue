@@ -56,7 +56,7 @@
 
 <script>
 import code from "@views/code/button"
-import SButton from "@lib/Button"
+import SButton from "@lib/button/button"
 export default {
     components: {
         SButton,

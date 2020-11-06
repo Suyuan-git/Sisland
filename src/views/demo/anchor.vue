@@ -14,7 +14,7 @@
 
 <script>
 import code from "@views/code/anchor"
-import SAnchor from "@lib/Anchor.vue"
+import SAnchor from "@lib/anchor/anchor"
 export default {
     components: {
         SAnchor
