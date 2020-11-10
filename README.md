@@ -10,6 +10,6 @@ $ npm install sisland --save
 main.js
 ```js
 import sisland from 'sisland';
-import 'sisland-ui/dist/sisland.css';
+import 'sisland/dist/sisland.css';
 Vue.use(sisland);
 ```
