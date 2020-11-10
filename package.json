@@ -1,7 +1,7 @@
 {
-  "name": "sisland-ui",
-  "version": "1.0.5",
-  "description": "sisland-ui",
+  "name": "sisland",
+  "version": "1.0.6",
+  "description": "sisland",
   "private": false,
   "main": "dist/sisland.umd.min.js",
   "author": "xuyuan",
@@ -35,6 +35,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not ie <= 8"
   ]
 }
