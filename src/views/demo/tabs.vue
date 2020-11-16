@@ -18,10 +18,12 @@
 import STabs from "@lib/tabs/tabs"
 import STab from "@lib/tab/tab"
 import code from "@views/code/tabs"
+import MCode from "@components/m-code/m-code"
 export default {
     components: {
         STabs,
         STab,
+        MCode
     },
     data() {
         return {

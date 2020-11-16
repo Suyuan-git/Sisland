@@ -5,7 +5,7 @@
         </div>
         <div class="code-box-meta markdown">
             <h4>{{ title }}</h4>
-            <p>{{ directions }}</p>
+            <p v-if="directions">{{ directions }}</p>
         </div>
         <div v-highlight>
             <pre><code class="html">{{code}}</code></pre>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name:"m-code",
+    name: "m-code",
     props: {
         title: {
             type: String,
@@ -23,7 +23,7 @@ export default {
         },
         directions: {
             type: String,
-            default: "说明"
+            default: ""
         },
         code: {
             type: String,

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="form_item">
         <label v-if="label" :class="{ form_item_label_required: isRequired }">{{ label }}</label>
         <slot></slot>
         <div v-if="validateState === 'error'" class="form_item_message">
@@ -42,7 +42,7 @@ export default {
         this.$once("hook:beforeDestroy", () => {
             this.dispatch("s-form", "on-form-item-remove", this)
         })
-        
+
         // 设置初始值，以便在重置时恢复默认值
         this.initialValue = this.itemVlue
 
@@ -112,13 +112,18 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.form_item_label_required:before {
-    content: "*";
-    color: red;
-    position: relative;
-    top: 50%;
-}
-.form_item_message {
-    color: red;
+.form_item {
+    .flex-sc;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    .form_item_label_required:before {
+        content: "*";
+        color: red;
+        position: relative;
+        top: 50%;
+    }
+    .form_item_message {
+        color: red;
+    }
 }
 </style>

@@ -6,14 +6,14 @@ const isProduction = process.env.NODE_ENV === "production"
 module.exports = {
     // 项目部署的基础路径,默认根目录
     // https://www.foobar.com/my-app/，那么将这个值改为 `/my-app/
-    publicPath: "./",
+    publicPath: "/",
 
     // build 输出文件目录
     outputDir: "dist",
 
     // eslint-loader 是否在保存的时候检查
     lintOnSave: false,
-    runtimeCompiler: true,
+
     // 调整内部的 webpack 配置。
     chainWebpack: config => {
         if (process.env.NODE_ENV === "development") {
@@ -21,7 +21,7 @@ module.exports = {
         } else {
             // 生产环境配置
         }
-        // 配置路径别名
+        // 配置路径别名,注意在样式及 html 模板中引用路径的简写时，前面需要加上 ～ 符，否则路径解析会失败
         config.resolve.alias
             .set("@src", resolve("src"))
             .set("@components", resolve("src/components"))
@@ -33,6 +33,9 @@ module.exports = {
             .set("@views", resolve("src/views"))
             .set("@assets", resolve("src/assets"))
             .set("@utils", resolve("src/utils"))
+
+        //解决首次进入页面所有资源预加载  https://cli.vuejs.org/zh/guide/html-and-static-assets.html#prefetch
+        config.plugins.delete("prefetch")
     },
     configureWebpack: config => {
         if (process.env.NODE_ENV === "production") {
@@ -45,13 +48,9 @@ module.exports = {
     // webpack-dev-server 相关配置
     devServer: {
         open: false,
-        host: "0.0.0.0",
-        port: 3000,
         https: false,
         hotOnly: false,
-        disableHostCheck: true,
-        // 设置代理
-        before: app => {}
+        disableHostCheck: true
     },
 
     // 生产环境是否生成 sourceMap 文件
@@ -63,20 +62,24 @@ module.exports = {
         extract: isProduction,
         // 在浏览器审查时是否显示当前css文件路径 开发环境建议开启 不影响热更新
         sourceMap: true,
+
         // 为预处理器的 loader 传递自定义选项。比如传递给
         // sass-loader 时，使用 `{ sass: { ... } }`。
-        loaderOptions: {},
+        loaderOptions: {
+            less: {
+                lessOptions: {
+                    javascriptEnabled: true
+                }
+            }
+        },
         // 启用 CSS modules for all css / pre-processor files.
         requireModuleExtension: true
     },
-
-    // 在生产环境下为 Babel 和 TypeScript 使用 `thread-loader`
-    // 在多核机器下会默认开启。
-    parallel: require("os").cpus().length > 1,
-
-    // PWA 插件相关配置
-    pwa: {},
-
     // 第三方插件配置
-    pluginOptions: {}
+    pluginOptions: {
+        "style-resources-loader": {
+            preProcessor: "less",
+            patterns: [path.resolve(__dirname, "src/css/mixin.less"), path.resolve(__dirname, "src/css/common.less")] //引入全局less变量
+        }
+    }
 }

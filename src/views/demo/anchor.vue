@@ -14,9 +14,11 @@
 
 <script>
 import code from "@views/code/anchor"
+import MCode from "@components/m-code/m-code"
 import SAnchor from "@lib/anchor/anchor"
 export default {
     components: {
+        MCode,
         SAnchor
     },
     data() {

@@ -19,11 +19,13 @@ import SButton from "@lib/button/button"
 import SwitchDemo1 from "@views/demo/switch.demo1.vue"
 import SwitchDemo2 from "@views/demo/switch.demo2.vue"
 import code from "@views/code/switch"
+import MCode from "@components/m-code/m-code"
 export default {
     components: {
         SButton,
         SwitchDemo1,
-        SwitchDemo2
+        SwitchDemo2,
+        MCode
     },
     data() {
         return {

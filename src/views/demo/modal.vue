@@ -50,10 +50,12 @@
 import code from "@views/code/modal"
 import SModal from "@lib/modal/modal"
 import SButton from "@lib/button/button"
+import MCode from "@components/m-code/m-code"
 export default {
     components: {
         SModal,
-        SButton
+        SButton,
+        MCode
     },
     data() {
         return {

@@ -1,5 +1,5 @@
 <template>
-    <input type="text" v-bind="$attrs" :value="currentValue" @input="handleInput" @blur="handleBlur" />
+    <input type="text" v-bind="$attrs" :value="currentValue" @input="handleInput" @blur="handleBlur" class="sld-input" />
 </template>
 
 <script>
@@ -37,4 +37,14 @@ export default {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.sld-input {
+    font-variant: tabular-nums;
+    padding: 4px 11px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+</style>

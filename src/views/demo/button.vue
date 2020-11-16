@@ -56,9 +56,11 @@
 
 <script>
 import code from "@views/code/button"
+import MCode from "@components/m-code/m-code"
 import SButton from "@lib/button/button"
 export default {
     components: {
+        MCode,
         SButton,
     },
     data() {

@@ -55,43 +55,46 @@ export default {
             asideList: [
                 {
                     title: "介绍",
-                    link: "/doc/introduce"
+                    link: "/docs/introduce"
                 },
                 {
                     title: "安装",
-                    link: "/doc/install"
+                    link: "/docs/install"
                 },
                 {
                     title: "快速上手",
-                    link: "/doc/get-start"
+                    link: "/docs/get-start"
                 },
-
                 {
                     title: "Components",
                     childer: [
                         {
                             title: "Button 按钮",
-                            link: "/doc/button"
+                            link: "/components/button"
+                        },
+                        {
+                            title: "Input 输入框",
+                            link: "/components/input"
                         },
                         {
                             title: "Switch 开关",
-                            link: "/doc/switch"
+                            link: "/components/switch"
                         },
                         {
                             title: "Modal 对话框",
-                            link: "/doc/modal"
+                            link: "/components/modal"
                         },
                         {
                             title: "Tabs 标签页",
-                            link: "/doc/tabs"
+                            link: "/components/tabs"
                         },
                         {
                             title: "Form 表单",
-                            link: "/doc/form"
+                            link: "/components/form"
                         },
                         {
                             title: "Anchor 锚点",
-                            link: "/doc/anchor"
+                            link: "/components/anchor"
                         }
                     ]
                 }

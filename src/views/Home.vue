@@ -4,7 +4,7 @@
             <h1 class="title">Sisland</h1>
             <h2 class="description">一个好用的UI框架</h2>
             <p class="actions">
-                <router-link to="/doc/introduce">开始使用</router-link>
+                <router-link to="/docs">开始使用</router-link>
                 <a href="https://github.com/XuYuanV/Sisland" target="_blank">GitHub</a>
             </p>
         </div>

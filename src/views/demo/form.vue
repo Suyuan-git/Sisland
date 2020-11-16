@@ -1,15 +1,23 @@
 <template>
     <div>
-        <s-form :model="form" :rules="rules" ref="form">
-            <s-form-item label="Name" prop="name">
-                <s-input v-model="form.name"></s-input>
-            </s-form-item>
-            <s-form-item label="Name2" prop="name2">
-                <s-input v-model="form.name2"></s-input>
-            </s-form-item>
-            <button @click="reset">重置</button>
-            <button @click="submit">提交</button>
-        </s-form>
+        <div class="markdown">
+            <h1>Form 表单</h1>
+            <h2>代码演示</h2>
+        </div>
+        <m-code title="基本使用">
+            <s-form :model="form" :rules="rules" ref="form">
+                <s-form-item label="账户" prop="user">
+                    <s-input v-model="form.user"></s-input>
+                </s-form-item>
+                <s-form-item label="密码" prop="password">
+                    <s-input v-model="form.password"></s-input>
+                </s-form-item>
+                <s-form-item>
+                    <s-button @click="reset">重置</s-button>
+                    <s-button type="primary" @click="submit">提交</s-button>
+                </s-form-item>
+            </s-form>
+        </m-code>
     </div>
 </template>
 
@@ -17,21 +25,32 @@
 import SForm from "@lib/form/form"
 import SFormItem from "@lib/form-item/form-item"
 import SInput from "@lib/input/input"
+import SButton from "@lib/button/button"
+import MCode from "@components/m-code/m-code"
+
 export default {
     components: {
         SInput,
         SForm,
-        SFormItem
+        SButton,
+        SFormItem,
+        MCode
     },
     data() {
         return {
             form: {
-                name: "",
-                name2: ""
+                user: "",
+                password: ""
             },
             rules: {
-                name: [{ required: true, message: "用户名不能为空", trigger: "blur" },{ required: true, message: "用户名不能为空", trigger: "change" }],
-                name2: [{ required: false, message: "用户名不能为空", trigger: "blur" }]
+                user: [
+                    { required: true, message: "用户名不能为空", trigger: "blur" },
+                    { required: true, message: "用户名不能为空", trigger: "change" }
+                ],
+                password: [
+                    { required: true, message: "密码不能为空", trigger: "blur" },
+                    { required: true, message: "密码不能为空", trigger: "change" }
+                ]
             }
         }
     },
@@ -43,14 +62,18 @@ export default {
             this.$refs.form
                 .validate()
                 .then(res => {
-                    console.log("pass");
+                    console.log("pass")
                 })
                 .catch(() => {
-                    console.log("error");
+                    console.log("error")
                 })
         }
     }
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.submit {
+    padding: 10px 0;
+}
+</style>

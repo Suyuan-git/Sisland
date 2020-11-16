@@ -3,9 +3,10 @@
         <h2>引入 sisland</h2>
         <p>main.js 文件</p>
         <div v-highlight>
-            <pre><code class="js">import sisland from 'sisland';
-    import 'sisland/dist/sisland.css';
-    Vue.use(sisland);</code></pre>
+<pre><code class="js">import sisland from 'sisland';
+import 'sisland/dist/sisland.css';
+
+Vue.use(sisland);</code></pre>
         </div>
     </div>
 </template>
