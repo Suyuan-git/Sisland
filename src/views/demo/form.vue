@@ -4,7 +4,7 @@
             <h1>Form 表单</h1>
             <h2>代码演示</h2>
         </div>
-        <m-code title="基本使用">
+        <m-code title="基本使用" :code="code.demo">
             <s-form :model="form" :rules="rules" ref="form">
                 <s-form-item label="账户" prop="user">
                     <s-input v-model="form.user"></s-input>
@@ -27,6 +27,7 @@ import SFormItem from "@lib/form-item/form-item"
 import SInput from "@lib/input/input"
 import SButton from "@lib/button/button"
 import MCode from "@components/m-code/m-code"
+import code from "@views/code/form"
 
 export default {
     components: {
@@ -38,6 +39,8 @@ export default {
     },
     data() {
         return {
+            code,
+
             form: {
                 user: "",
                 password: ""

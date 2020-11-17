@@ -6,9 +6,11 @@
         </div>
 
         <m-code title="基础用法" directions="最简单的用法" :code="code.demo">
-            <s-anchor href="#test">点击跳转到 id为#test的元素</s-anchor>
+            <s-anchor href="#test">
+                <s-button>点击跳转锚点</s-button>
+            </s-anchor>
         </m-code>
-        <div id="test" style="margin-top:500px" >#test</div>
+        <div id="test" style="margin-top:500px" >锚点处</div>
     </div>
 </template>
 
@@ -16,9 +18,11 @@
 import code from "@views/code/anchor"
 import MCode from "@components/m-code/m-code"
 import SAnchor from "@lib/anchor/anchor"
+import SButton from "@lib/button/button"
 export default {
     components: {
         MCode,
+        SButton,
         SAnchor
     },
     data() {

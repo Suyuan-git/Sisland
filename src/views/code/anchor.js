@@ -2,7 +2,10 @@ let code = {}
 code.demo = `
 <template>
     <div>
-        <s-anchor href="#test">点击跳转到 id为#test的元素</s-anchor>
+        <s-anchor href="#test">
+            <s-button>点击跳转锚点</s-button>
+        </s-anchor>
+        
         <div id="test" style="margin-top:500px">#test</div>
     </div>
 </template>
