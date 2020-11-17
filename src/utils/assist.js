@@ -3,7 +3,7 @@ export function findComponentUpward(context, componentName) {
     let parent = context.$parent
     let name = parent.$options.name
 
-    // componentName不是数组, 可以不用indexOf
+    // componentName不是数组, 可以不用includes
     while (parent && (!name || componentName !== name)) {
         parent = parent.$parent
         if (parent) name = parent.$options.name

@@ -13,14 +13,14 @@ export default {
             type: String,
             default: "default",
             validator(value) {
-                return ["default", "primary", "text", "link"].indexOf(value) !== -1
+                return ["default", "primary", "text", "link"].includes(value)
             }
         },
         size: {
             type: String,
             default: "default",
             validator(value) {
-                return ["default", "large", "small"].indexOf(value) !== -1
+                return ["default", "large", "small"].includes(value)
             }
         },
         disabled: {
