@@ -65,11 +65,11 @@ export default {
     > .actions {
         padding: 8px 0;
         a {
-            display: flex;
+            min-width: 112px;
+            display: inline-flex;
             justify-content: center;
             align-items: center;
             font-size: 16px;
-            display: inline-block;
             margin: 0 8px;
             outline: none;
             cursor: pointer;
