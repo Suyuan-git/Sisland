@@ -4,7 +4,7 @@
 <h1 align="center">Sisland</h1>
 
 <p align="center">
- <a href="https://vant-contrib.gitee.io/vant">文档网站</a>
+ <a href="https://xuyuan875.gitee.io/sisland-docs">文档网站</a>
 </p>
 
 ## 安装
