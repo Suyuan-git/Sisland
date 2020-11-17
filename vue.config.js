@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV === "production"
 module.exports = {
     // 项目部署的基础路径,默认根目录
     // https://www.foobar.com/my-app/，那么将这个值改为 `/my-app/
-    publicPath: "/",
+    publicPath: "./",
 
     // build 输出文件目录
     outputDir: "dist",

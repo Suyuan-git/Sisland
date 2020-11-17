@@ -10,7 +10,7 @@
         </div>
         <ul>
             <li>
-                <img src="https://cn.vuejs.org/images/logo.png" class="vue" />
+                <img src="@assets/vue.png" class="vue" />
                 <h3>基于 Vue 2</h3>
                 <p>基于Vue 2 框架开发</p>
             </li>
