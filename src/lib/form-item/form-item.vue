@@ -112,10 +112,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@bottom: 20px;
+
 .form_item {
     .flex-sc;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
+    margin-bottom: @bottom;
+    position: relative;
     .form_item_label_required:before {
         content: "*";
         color: red;
@@ -123,7 +126,10 @@ export default {
         top: 50%;
     }
     .form_item_message {
+        position: absolute;
+        bottom: -@bottom;
         color: red;
+        left: 3em;
     }
 }
 </style>

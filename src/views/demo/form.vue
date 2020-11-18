@@ -2,6 +2,7 @@
     <div>
         <div class="markdown">
             <h1>Form 表单</h1>
+            <p>使用 <a href="https://github.com/yiminghe/async-validator" target="_blank" style="color: #1890ff">async-validator</a> 库作为校验库</p>
             <h2>代码演示</h2>
         </div>
         <m-code title="基本使用" :code="code.demo">
@@ -20,7 +21,7 @@
         </m-code>
     </div>
 </template>
-
+  
 <script>
 import SForm from "@lib/form/form"
 import SFormItem from "@lib/form-item/form-item"
